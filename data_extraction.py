@@ -1,4 +1,9 @@
-def splitTrainTest(self, df, test_ratio, seed=1):
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import StratifiedShuffleSplit
+
+
+def splitTrainTest(df, test_ratio, seed=1):
     """
     Split Dataframe into train and test set randomly.
 
@@ -33,7 +38,7 @@ def splitTrainTest(self, df, test_ratio, seed=1):
     return train_set, test_set
 
 
-def splitTrainTestStratified(self, df, test_ratio, seed, target_column):
+def splitTrainTestStratified(df, test_ratio, seed, target_column):
     """
     Split Dataframe into train and test set with stratified method.
 
